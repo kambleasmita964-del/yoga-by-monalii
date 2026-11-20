@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga Awareness and Practice</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f4f8f2;color:#26382c}
+header{background:#174d38;color:white;padding:18px 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none}
+section{padding:55px 8%}
+.hero{background:linear-gradient(#123d2dbb,#123d2dbb),url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1400') center/cover;color:white;padding:110px 8%}
+.hero h1{font-size:42px;margin-bottom:15px}
+.hero p{font-size:18px;line-height:1.7}
+h2{text-align:center;color:#20553b;margin-bottom:28px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card,.panel{background:white;padding:22px;border-radius:12px;box-shadow:0 4px 14px #0001}
+.card img{width:100%;height:170px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+.card h3{color:#286344;margin-bottom:10px}
+.card p{line-height:1.6}
+input,select,textarea{width:100%;padding:12px;margin:9px 0;border:1px solid #ccc;border-radius:6px}
+button,.btn{display:inline-block;background:#65964e;color:white;padding:12px 20px;border:0;border-radius:6px;cursor:pointer;text-decoration:none;margin-top:10px}
+.panel{max-width:550px;margin:auto}
+.center{text-align:center}
+#timer{font-size:45px;text-align:center;margin:20px;color:#20553b}
+footer{background:#174d38;color:white;text-align:center;padding:25px}
+</style>
+</head>
+<body>
+
+<header>
+<h2 style="color:white;margin:0">🌿 Yoga Life</h2>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#benefits">Benefits</a>
+<a href="#poses">Poses</a>
+<a href="#recommend">Recommendations</a>
+<a href="#practice">Practice</a>
+<a href="#account">Account</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>Yoga Awareness and Practice</h1>
+<p>Discover the power of yoga and build a healthier lifestyle through mindful breathing, yoga postures and meditation.</p>
+<a class="btn" href="#poses">Explore Yoga</a>
+</section>
+
+<section id="about">
+<h2>About Yoga</h2>
+<div class="panel">
+<p>Yoga is an ancient practice that connects the mind and body. It includes physical postures, breathing exercises and meditation. Regular suitable practice can support flexibility, balance and relaxation.</p>
+<br>
+<p><b>Our Mission:</b> To spread yoga awareness and encourage people to include safe yoga practices in daily life.</p>
+</div>
+</section>
+
+<section id="benefits">
+<h2>Benefits of Yoga</h2>
+<div class="cards">
+<div class="card"><h3>Mental Wellness</h3><p>Breathing exercises and meditation can help manage everyday stress.</p></div>
+<div class="card"><h3>Flexibility</h3><p>Gentle yoga movements can improve flexibility and mobility.</p></div>
+<div class="card"><h3>Fitness</h3><p>Regular practice supports general fitness and well-being.</p></div>
+<div class="card"><h3>Relaxation</h3><p>Relaxation techniques can help calm the body and mind.</p></div>
+<div class="card"><h3>Balance</h3><p>Standing poses can develop balance and body awareness.</p></div>
+<div class="card"><h3>Concentration</h3><p>Mindful breathing can support attention and focus.</p></div>
+</div>
+</section>
+
+<section id="poses">
+<h2>Yoga Poses</h2>
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?w=700" alt="Yoga practice">
+<h3>Surya Namaskar</h3><p>A sequence of yoga postures coordinated with breathing.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1562088287-bde35a1ea917?w=700" alt="Yoga posture">
+<h3>Tadasana</h3><p>Mountain Pose encourages upright posture and balance.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=700" alt="Yoga meditation">
+<h3>Vrikshasana</h3><p>Tree Pose is a standing balance posture.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=700" alt="Meditation">
+<h3>Vajrasana</h3><p>A kneeling seated posture. Avoid it if it causes discomfort.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=700" alt="Yoga stretching">
+<h3>Bhujangasana</h3><p>Cobra Pose is a gentle backbend. Do not force the movement.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1510894347719-fc9a8e7b6c4d?w=700" alt="Yoga relaxation">
+<h3>Shavasana</h3><p>A relaxation posture practised while lying comfortably on the back.</p>
+</div>
+</div>
+</section>
+
+<section id="recommend">
+<h2>Yoga Recommendations</h2>
+<div class="panel">
+<p>Select your wellness goal:</p>
+<select id="concern">
+<option value="">Choose an option</option>
+<option value="stress">Everyday stress</option>
+<option value="sleep">Relaxation before sleep</option>
+<option value="flexibility">Flexibility and mobility</option>
+<option value="balance">Balance and posture</option>
+<option value="general">General fitness</option>
+</select>
+<button onclick="recommendYoga()">Get Recommendation</button>
+<p id="suggestion" style="margin-top:18px;line-height:1.7"></p>
+</div>
+</section>
+
+<section id="practice">
+<h2>Guided Practice Timer</h2>
+<div class="panel center">
+<p>Choose your practice duration:</p>
+<select id="duration">
+<option value="300">5 Minutes</option>
+<option value="600">10 Minutes</option>
+<option value="900">15 Minutes</option>
+<option value="1200">20 Minutes</option>
+</select>
+<div id="timer">05:00</div>
+<button onclick="startTimer()">Start</button>
+<button onclick="pauseTimer()">Pause</button>
+<button onclick="resetTimer()">Reset</button>
+</div>
+</section>
+
+<section id="account">
+<h2>Create Account / Login</h2>
+<div class="panel">
+<input id="username" placeholder="Full Name">
+<input id="email" type="email" placeholder="Email Address">
+<input id="password" type="password" placeholder="Password">
+<button onclick="registerUser()">Create Account</button>
+<button onclick="loginUser()">Login</button>
+<p id="accountMessage" style="margin-top:15px"></p>
+<p style="font-size:12px;color:#777;margin-top:10px">Demo only: account details are stored locally in this browser. This is not a secure production login or shared database.</p>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<div class="panel">
+<input placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Write your message"></textarea>
+<button onclick="alert('Thank you for your message! This demo does not send messages to a server.')">Submit</button>
+</div>
+</section>
+
+<footer>
+<p>Yoga Awareness and Practice</p>
+<p>Healthy Mind • Healthy Body • Healthy Life</p>
+<p>© 2026 Yoga Awareness Project</p>
+</footer>
+
+<script>
+function recommendYoga(){
+const value=document.getElementById("concern").value;
+const results={
+stress:"Try comfortable seated breathing and Shavasana for relaxation.",
+sleep:"Try gentle breathing and a comfortable relaxation practice before bedtime.",
+flexibility:"Try gentle Cat-Cow movement and comfortable mobility exercises.",
+balance:"Try Tadasana near a stable support, without forcing your balance.",
+general:"Try a gentle beginner yoga routine with warm-up and rest."
+};
+document.getElementById("suggestion").textContent=results[value]||"Please select an option.";
+}
+
+let remaining=300,interval=null;
+function updateTimer(){
+let m=Math.floor(remaining/60);
+let s=remaining%60;
+document.getElementById("timer").textContent=
+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+}
+document.getElementById("duration").addEventListener("change",function(){
+remaining=Number(this.value);updateTimer();
+});
+function startTimer(){
+if(interval)return;
+if(remaining<=0)return;
+interval=setInterval(()=>{
+remaining--;
+updateTimer();
+if(remaining<=0){
+clearInterval(interval);interval=null;
+alert("Practice session completed!");
+}
+},1000);
+}
+function pauseTimer(){clearInterval(interval);interval=null;}
+function resetTimer(){
+pauseTimer();
+remaining=Number(document.getElementById("duration").value);
+updateTimer();
+}
+function registerUser(){
+let name=document.getElementById("username").value.trim();
+let email=document.getElementById("email").value.trim();
+let password=document.getElementById("password").value;
+if(!name||!email||!password){
+document.getElementById("accountMessage").textContent="Please fill all fields.";
+return;
+}
+let users=JSON.parse(localStorage.getItem("yogaUsers")||"[]");
+if(users.some(u=>u.email===email)){
+document.getElementById("accountMessage").textContent="Account already exists. Please login.";
+return;
+}
+users.push({name,email,password});
+localStorage.setItem("yogaUsers",JSON.stringify(users));
+document.getElementById("accountMessage").textContent="Account created successfully on this browser!";
+}
+function loginUser(){
+let email=document.getElementById("email").value.trim();
+let password=document.getElementById("password").value;
+let users=JSON.parse(localStorage.getItem("yogaUsers")||"[]");
+let user=users.find(u=>u.email===email&&u.password===password);
+document.getElementById("accountMessage").textContent=
+user?"Welcome, "+user.name+"!":"Account not found. Check your details.";
+}
+updateTimer();
+</script>
+</body>
+</html>
